@@ -1,0 +1,156 @@
+openapi: 0.0.1
+info:
+  title: Bekräfta beslut API
+  version: 1.0.0
+  description: API för att registrera avslag eller bekräfta beslut på ersättningar.
+paths:
+  /regel/bekraftabeslut/{kundbehovsflodeId}:
+    get:
+      tags: [RegelBekraftaBeslutController]
+      operationId: getData
+      summary: Hämta information som behövs för att utföra kontrollen
+      description: Hämta information som behövs för att utföra kontrollen
+      parameters:
+        - name: kundbehovsflodeId
+          in: path
+          required: true
+          description: ID för kundbehovsflödet
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: Information hämtad OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetDataResponse"
+        "404":
+          description: Informationen hittades inte
+    patch:
+      tags: [RegelBekraftaBeslutController]
+      operationId: updateData
+      summary: Uppdatera om kunden har rätt till premie
+      description: Uppdatera om kunden har rätt till premie
+      parameters:
+        - name: kundbehovsflodeId
+          in: path
+          required: true
+          description: ID för kundbehovsflödet
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PatchDataRequest"
+      responses:
+        "200":
+          description: Uppdatering genomförd OK
+        "404":
+          description: Informationen hittades inte
+
+components:
+  schemas:
+    GetDataResponse:
+      type: object
+      properties:
+        kundbehovsflode_id:
+          type: string
+          format: uuid
+        kund:
+          $ref: "#/components/schemas/Kund"
+        ersattning:
+          type: array
+          items:
+            $ref: "#/components/schemas/Ersattning"
+
+    PatchDataRequest:
+      type: object
+      properties:
+        ersattning_id:
+          type: string
+          format: uuid
+        avslagsanledning:
+          type: string
+          nullable: true
+        signera:
+          type: boolean
+          default: false
+        beslutsutfall:
+          $ref: "#/components/schemas/Beslutsutfall"
+
+    Kund:
+      type: object
+      properties:
+        efternamn:
+          type: string
+        fornamn:
+          type: string
+        kon:
+          type: string
+          enum: [MAN, KVINNA]
+        anstallning:
+          $ref: "#/components/schemas/Anstallning"
+
+    Anstallning:
+      type: object
+      properties:
+        organisationsnummer:
+          type: string
+        organisationsnamn:
+          type: string
+        arbetstid_procent:
+          type: integer
+        anstallningsdag:
+          type: string
+          format: date
+        sista_anstallningsdag:
+          type: string
+          format: date
+        lon:
+          $ref: "#/components/schemas/Lon"
+
+    Lon:
+      type: object
+      properties:
+        lonesumma:
+          type: integer
+        from:
+          type: string
+          format: date
+        tom:
+          type: string
+          format: date
+
+    Ersattning:
+      type: object
+      properties:
+        ersattning_id:
+          type: string
+          format: uuid
+        ersattningstyp:
+          type: string
+        omfattning_procent:
+          type: integer
+        belopp:
+          type: integer
+        berakningsgrund:
+          type: integer
+        beslutsutfall:
+          $ref: "#/components/schemas/Beslutsutfall"
+        avslagsanledning:
+          type: string
+          nullable: true
+        from:
+          type: string
+          format: date
+        tom:
+          type: string
+          format: date
+
+    Beslutsutfall:
+      type: string
+      enum: [JA, NEJ, FU]
