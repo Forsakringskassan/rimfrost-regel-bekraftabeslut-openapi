@@ -1,8 +1,9 @@
-openapi: 0.0.1
+openapi: 3.0.3 #versionen av OpenAPI-specifikationen.
 info:
   title: Bekräfta beslut API
   version: 1.0.0
   description: API för att registrera avslag eller bekräfta beslut på ersättningar.
+
 paths:
   /regel/bekraftabeslut/{kundbehovsflodeId}:
     get:
