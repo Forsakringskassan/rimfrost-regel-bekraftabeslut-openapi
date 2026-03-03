@@ -1,3 +1,10 @@
+## 0.0.2 (2026-03-03)
+
+### Bug Fixes
+
+-  renaming handlaggning ([13eef](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/13eef55f43d338c) Ulf Slunga)  
+-  removing NPM_TOKEN ([9dee4](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/9dee467d977b3eb) Tomas Bjerre)  
+
 ## 0.0.1 (2025-12-16)
 
 ### Other changes
