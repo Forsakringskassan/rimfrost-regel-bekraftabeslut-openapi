@@ -5,17 +5,17 @@ info:
   description: API för att registrera avslag eller bekräfta beslut på ersättningar.
 
 paths:
-  /regel/bekraftabeslut/{kundbehovsflodeId}:
+  /regel/bekraftabeslut/{handlaggningId}:
     get:
       tags: [RegelBekraftaBeslutController]
       operationId: getData
       summary: Hämta information som behövs för att utföra kontrollen
       description: Hämta information som behövs för att utföra kontrollen
       parameters:
-        - name: kundbehovsflodeId
+        - name: handlaggningId
           in: path
           required: true
-          description: ID för kundbehovsflödet
+          description: ID för handläggningsärendet
           schema:
             type: string
             format: uuid
@@ -34,10 +34,10 @@ paths:
       summary: Uppdatera om kunden har rätt till premie
       description: Uppdatera om kunden har rätt till premie
       parameters:
-        - name: kundbehovsflodeId
+        - name: handlaggningId
           in: path
           required: true
-          description: ID för kundbehovsflödet
+          description: ID för handläggningsärendet
           schema:
             type: string
             format: uuid
@@ -58,7 +58,7 @@ components:
     GetDataResponse:
       type: object
       properties:
-        kundbehovsflode_id:
+        handlaggning_id:
           type: string
           format: uuid
         kund:
