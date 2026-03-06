@@ -1,3 +1,10 @@
+## 0.0.3 (2026-03-06)
+
+### Bug Fixes
+
+-  typo ([1d022](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/1d022587a89a7f3) Nils Elveros)  
+-  update so patch takes a ersattningsstatus argument ([369d7](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/369d7875ea6e1a6) Nils Elveros)  
+
 ## 0.0.2 (2026-03-03)
 
 ### Bug Fixes
