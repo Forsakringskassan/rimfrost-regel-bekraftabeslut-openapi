@@ -74,14 +74,8 @@ components:
         ersattning_id:
           type: string
           format: uuid
-        avslagsanledning:
-          type: string
-          nullable: true
-        signera:
-          type: boolean
-          default: false
-        beslutsutfall:
-          $ref: "#/components/schemas/Beslutsutfall"
+        ersattningsstatus:
+          $ref: "#/components/schemas/Ersattningstatus"
 
     Kund:
       type: object
@@ -155,3 +149,13 @@ components:
     Beslutsutfall:
       type: string
       enum: [JA, NEJ, FU]
+
+    Ersattningsstatus:
+      type: string
+      description: Ersättningsstatus
+      enum:
+        - PLANERAT
+        - YRKAT
+        - UNDER_UTREDNING
+        - FASTSTALLT_UNDER_UTREDNING
+        - FASTSTALLT
