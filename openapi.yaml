@@ -150,7 +150,7 @@ components:
       type: string
       enum: [JA, NEJ, FU]
 
-    Ersattningsstatus:
+    Ersattningstatus:
       type: string
       description: Ersättningsstatus
       enum:
