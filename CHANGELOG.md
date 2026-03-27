@@ -1,3 +1,10 @@
+## 0.0.4 (2026-03-27)
+
+### Bug Fixes
+
+-  Rename Ersattningstatus ([ca251](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/ca2511654b6b0a7) Lars Persson)  
+-  **deps**  update dependency org.openapitools:jackson-databind-nullable to v0.2.9 ([7b71d](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/7b71d44d8476bcd) renovate[bot])  
+
 ## 0.0.3 (2026-03-06)
 
 ### Bug Fixes
