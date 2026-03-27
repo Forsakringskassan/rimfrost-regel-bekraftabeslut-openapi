@@ -7,8 +7,6 @@ info:
 paths:
   /regel/bekraftabeslut/{handlaggningId}:
     get:
-      tags: [RegelBekraftaBeslutController]
-      operationId: getData
       summary: Hämta information som behövs för att utföra kontrollen
       description: Hämta information som behövs för att utföra kontrollen
       parameters:
@@ -29,8 +27,6 @@ paths:
         "404":
           description: Informationen hittades inte
     patch:
-      tags: [RegelBekraftaBeslutController]
-      operationId: updateData
       summary: Uppdatera om kunden har rätt till premie
       description: Uppdatera om kunden har rätt till premie
       parameters:
@@ -74,8 +70,8 @@ components:
         ersattning_id:
           type: string
           format: uuid
-        ersattningsstatus:
-          $ref: "#/components/schemas/Ersattningstatus"
+        yrkandestatus:
+          $ref: "#/components/schemas/Yrkandestatus"
 
     Kund:
       type: object
@@ -103,20 +99,6 @@ components:
           type: string
           format: date
         sista_anstallningsdag:
-          type: string
-          format: date
-        lon:
-          $ref: "#/components/schemas/Lon"
-
-    Lon:
-      type: object
-      properties:
-        lonesumma:
-          type: integer
-        from:
-          type: string
-          format: date
-        tom:
           type: string
           format: date
 
@@ -150,7 +132,7 @@ components:
       type: string
       enum: [JA, NEJ, FU]
 
-    Ersattningstatus:
+    Yrkandestatus:
       type: string
       description: Ersättningsstatus
       enum:
