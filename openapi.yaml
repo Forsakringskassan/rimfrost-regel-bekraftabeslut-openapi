@@ -97,12 +97,12 @@ paths:
                 items:
                   $ref: "#/components/schemas/Referensdata"
 
-  /regel/bekraftabeslut/beslutsutfall:
+  /regel/bekraftabeslut/beslutsutfallstyp:
     get:
       tags: [BekraftaBeslutController]
-      operationId: getBeslutsutfall
-      summary: Hämta möjliga alternativ för beslutsutfall
-      description:  Hämta möjliga alternativ för beslutsutfall
+      operationId: getBeslutsutfallstyp
+      summary: Hämta möjliga alternativ för beslutsutfallstyp
+      description:  Hämta möjliga alternativ för beslutsutfallstyp
       responses:
         "200":
           description: Information hämtad OK
