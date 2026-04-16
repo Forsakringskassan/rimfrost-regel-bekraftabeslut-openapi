@@ -49,6 +49,71 @@ paths:
         "404":
           description: Informationen hittades inte
 
+  /regel/bekraftabeslut/yrkandestatus:
+    get:
+      tags: [BekraftaBeslutController]
+      operationId: getYrkandestatus
+      summary: Hämta möjliga alternativ för yrkandestatus
+      description:  Hämta möjliga alternativ för yrkandestatus
+      responses:
+        "200":
+          description: Information hämtad OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Referensdata"
+
+  /regel/bekraftabeslut/avslutstyp:
+    get:
+      tags: [BekraftaBeslutController]
+      operationId: getAvslutstyp
+      summary: Hämta möjliga alternativ för avslutstyp
+      description:  Hämta möjliga alternativ för avslutstyp
+      responses:
+        "200":
+          description: Information hämtad OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Referensdata"
+
+  /regel/bekraftabeslut/beslutstyp:
+    get:
+      tags: [BekraftaBeslutController]
+      operationId: getBeslutstyp
+      summary: Hämta möjliga alternativ för beslutstyp
+      description:  Hämta möjliga alternativ för beslutstyp
+      responses:
+        "200":
+          description: Information hämtad OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Referensdata"
+
+  /regel/bekraftabeslut/beslutsutfall:
+    get:
+      tags: [BekraftaBeslutController]
+      operationId: getBeslutsutfall
+      summary: Hämta möjliga alternativ för beslutsutfall
+      description:  Hämta möjliga alternativ för beslutsutfall
+      responses:
+        "200":
+          description: Information hämtad OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Referensdata"
+
+
 components:
   schemas:
     GetDataResponse:
@@ -67,11 +132,33 @@ components:
     PatchDataRequest:
       type: object
       properties:
-        ersattning_id:
+        ersattningar:
+          type: array
+          items:
+            $ref: '#/components/schemas/UpdateErsattning'
+        beslut:
+          $ref: '#/components/schemas/Beslut'
+          description: Övergripande beslut för specificerade ersättningar
+      required:
+        - ersattningar
+        - beslut
+
+    Beslut:
+      type: object
+      properties:
+        avslutstyp:
           type: string
-          format: uuid
-        yrkandestatus:
-          $ref: "#/components/schemas/Yrkandestatus"
+          description: ID för avslutstyp
+        beslutstyp:
+          type: string
+          description: ID för beslutstyp
+        beslutsutfall:
+          type: string
+          description: ID för beslutsutfall
+      required:
+        - avslutstyp
+        - beslutstyp
+        - beslutsutfall
 
     Kund:
       type: object
@@ -128,16 +215,36 @@ components:
           type: string
           format: date
 
+    UpdateErsattning:
+      type: object
+      properties:
+        ersattning_id:
+          type: string
+          format: uuid
+        yrkandestatus:
+          type: string
+          description: ID för yrkandestatus
+      required:
+        - ersattning_id
+        - yrkandestatus
+
     Beslutsutfall:
       type: string
       enum: [JA, NEJ, FU]
 
-    Yrkandestatus:
-      type: string
-      description: Ersättningsstatus
-      enum:
-        - PLANERAT
-        - YRKAT
-        - UNDER_UTREDNING
-        - FASTSTALLT_UNDER_UTREDNING
-        - FASTSTALLT
+    Referensdata:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID för referensdata post
+        kod:
+          type: string
+          description: Kod för referensdata post
+        namn:
+          type: string
+          description: Namn på referensdata post
+      example:
+        id: "bae3c392-fbf4-4e16-8937-c27e93edf4e4"
+        kod: "YRKANDESTATUS-1"
+        namn: "Planerat"
