@@ -1,3 +1,9 @@
+## 0.0.6 (2026-04-16)
+
+### Bug Fixes
+
+-  Rename /beslutsutfall to /beslutsutfallstyp ([1c32e](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/1c32ea0338aee9d) Lars Persson)  
+
 ## 0.0.5 (2026-04-16)
 
 ### Bug Fixes
