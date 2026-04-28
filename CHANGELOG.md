@@ -1,3 +1,20 @@
+## 1.0.0 (2026-04-28)
+
+### Breaking changes
+
+-  release 1.0 ([f2177](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/f2177b7f607df6f) Nils Elveros)  
+
+### Features
+
+-  release 1.0 ([f2177](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/f2177b7f607df6f) Nils Elveros)  
+
+### Bug Fixes
+
+-  **deps**  update jackson monorepo ([7420e](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/7420eaa1d6b277e) renovate[bot])  
+
+### Dependency updates
+
+- update gradle to v9.4.1 ([61f83](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/61f833e997ccbc7) renovate[bot])  
 ## 0.0.6 (2026-04-16)
 
 ### Bug Fixes
