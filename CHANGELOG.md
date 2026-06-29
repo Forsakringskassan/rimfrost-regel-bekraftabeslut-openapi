@@ -1,3 +1,15 @@
+## 1.1.1 (2026-06-29)
+
+### Bug Fixes
+
+-  Bump gradle-conventions and openapi versions to match rtf-manuell openapi ([0d4a0](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/0d4a0805b52e168) Lars Persson)  
+-  **deps**  update dependency se.fk.gradle:gradle-conventions to v1.18.3 ([626ae](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/626aefb00ab1bbc) renovate[bot])  
+-  **deps**  update jackson monorepo ([54b6f](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/54b6f4869fc26b9) renovate[bot])  
+-  **deps**  update dependency se.fk.gradle:gradle-conventions to v1.18.2 ([9d78d](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/9d78d24ab7cf19d) renovate[bot])  
+
+### Dependency updates
+
+- update gradle to v9.6.0 ([dbfad](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/dbfad28bd66bb24) renovate[bot])  
 ## 1.0.1 (2026-06-03)
 
 ### Bug Fixes
