@@ -1,3 +1,18 @@
+## 1.1.2 (2026-09-21)
+
+### Bug Fixes
+
+-  **deps**  update jackson monorepo to v2.22.2 ([a6a82](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/a6a82853045acd8) renovate[bot])  
+-  **deps**  update dependency org.openapitools:jackson-databind-nullable to v0.2.11 ([dccea](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/dcceabaf5182efe) renovate[bot])  
+-  **deps**  update jackson monorepo to v2.22.1 ([83f31](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/83f3186c7736b35) renovate[bot])  
+-  Replace npm workflows with gradle workflows ([0f771](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/0f7719d882fab50) Lars Persson)  
+
+### Dependency updates
+
+- update gradle to v9.7.1 ([dc371](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/dc371bae5f7ebef) renovate[bot])  
+- pin forsakringskassan/.github action to d1349e6 ([0b92a](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/0b92ad5aa7c7dfe) renovate[bot])  
+- update gradle to v9.7.0 ([9ce41](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/9ce41f14cd7de80) renovate[bot])  
+- update gradle to v9.6.1 ([a6003](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/a6003d879075994) renovate[bot])  
 ## 1.1.1 (2026-06-29)
 
 ### Bug Fixes
