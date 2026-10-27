@@ -1,3 +1,17 @@
+## 1.1.3 (2026-10-27)
+
+### Bug Fixes
+
+-  Replace github workflows ([ee87d](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/ee87d7dfec79c66) Lars Persson)  
+-  **deps**  update jackson monorepo to v2.22.3 ([99eb5](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/99eb5eaea38374a) renovate[bot])  
+-  **deps**  update dependency org.openapitools:jackson-databind-nullable to v0.2.12 ([55384](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/553842412489b62) renovate[bot])  
+
+### Dependency updates
+
+- update forsakringskassan/.github digest to cbd74f1 ([7d3b1](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/7d3b14c6376ca7c) renovate[bot])  
+- update gradle to v9.8.1 ([f5588](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/f55884cae1532aa) renovate[bot])  
+- update gradle to v9.8.0 ([0ee62](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/0ee6200011fdc3c) renovate[bot])  
+- update forsakringskassan/.github digest to bfb01f7 ([411f2](https://github.com/Forsakringskassan/rimfrost-regel-bekraftabeslut-openapi/commit/411f2e273876ca0) renovate[bot])  
 ## 1.1.2 (2026-09-21)
 
 ### Bug Fixes
